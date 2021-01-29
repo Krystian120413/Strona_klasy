@@ -1,0 +1,391 @@
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="author" content="Krystian Zbyrad" />
+	<title>Plan Lekcji</title>
+	<style>
+		html {
+			scroll-behavior: smooth;
+		}
+		body {
+			background-image:url("img/darkness.png");
+			text-align: center;
+		}
+		
+		#tytul {
+			font-size:135px;
+			margin-bottom: 20px;
+			color:#fff;
+			text-align:center;
+			cursor:default;
+			width: 100%;
+		}
+		
+		#plan {
+			position: relative;
+			color:#fff;
+			font-size:22px;
+			cursor:default;
+			width: calc(100% - 40px);
+			margin: 0 20px 0 20px;
+		}
+		
+		#tabela {
+			color:#fff;
+			font-size:25px;
+			width:100%;
+			min-height:600px;
+			border:#e58921 solid;
+		}
+		
+			th {
+			border:red solid;
+			}
+			
+			td {
+				border:#56e354 solid;
+				font-size:20px;
+				text-align:center;
+			}
+
+			#arrow>img {
+				widows: 10%;
+				height:150px;
+			}
+			
+		#grupy {
+			color:white;
+			font-size:80px;
+			text-shadow:0 0 2px gold;
+		}
+
+		.group {
+			width:40%;
+			font-size: 18px;
+			text-align: left;
+		}
+		
+		#grupa_pierwsza {
+			color:#fff;
+			position:relative;
+			top:140px;
+			left:60px;
+			width: 30%;
+		}
+		
+		#grupa_druga {
+			position: relative;;
+			color:#fff;
+			top:200px;
+			left:400px;
+			width: 30%;
+		}
+		
+		#grupa_trzecia {
+			position:relative;
+			color:#fff;
+			top:-780px;
+			left:1000px;
+			width: 30%;
+		}
+		
+		#grupa_czwarta {
+			position:relative;
+			color:#fff;
+			top:-700px;
+			left:1150px;
+			width: 30%;
+		}
+
+		@media (max-width: 1099px) {
+			#grupa_pierwsza {
+				color:#fff;
+				position:relative;
+				top:100px;
+				left:60px;
+			}
+		
+			#grupa_druga {
+				position:relative;
+				color:#fff;
+				top:150px;
+				left:60px;
+			}
+			
+			#grupa_trzecia {
+				position:relative;
+				color:#fff;
+				top:-850px;
+				left:450px;
+			}
+			
+			#grupa_czwarta {
+				position:relative;
+				color:#fff;
+				top:-800px;
+				left:450px;
+			}
+		}
+
+		@media (min-width: 1100px) and (max-width: 1799px) {
+			#grupa_pierwsza {
+				color:#fff;
+				position:relative;
+				top:100px;
+				left:60px;
+			}
+		
+			#grupa_druga {
+				position:relative;
+				color:#fff;
+				top:150px;
+				left:60px;
+			}
+			
+			#grupa_trzecia {
+				position:relative;
+				color:#fff;
+				top:-850px;
+				left:750px;
+			}
+			
+			#grupa_czwarta {
+				position:relative;
+				color:#fff;
+				top:-800px;
+				left:750px;
+			}
+		}
+		
+			.nazwa_grupy {
+				text-align: left;
+				font-size:32px;
+				width:96%;
+				height:52px;
+				border:green solid 5px;
+				border-radius:15px 15px 0px 0px;
+				cursor:default;
+				padding:3px;
+			}
+			
+			.nazwiska {
+				border:#e546f2 solid 4px;
+				font-size:24px;
+				line-height:35px;
+				border-radius:0px 0px 7px 7px;
+				padding-left:20px;
+				cursor:default;
+				text-decoration:underline;
+			}
+		
+		#stopka {
+			position:absolute;
+			top:2000px;
+			color:#000;
+		}
+	</style>
+</head>
+<body>
+	<div id="tytul">Plan Lekcji</div>
+	<div id="plan">
+		<table id="tabela">
+			<tr>
+				<th>Nr.</th>
+				<th>Godz.</th>
+				<th>Poniedziałek</th>
+				<th>Wtorek</th>
+				<th>Środa</th>
+				<th>Czwartek</th>
+				<th>Piątek</th>
+			</tr>
+			<tr>
+				<th>1</th>
+				<th>7:10 - 7:55</th>
+				<td></td>
+				<td>j.ang - 1/4  6</td>
+				<td></td>
+				<td></td>
+				<td>r_geografia - 1/4  6<br>
+					r_angielski - 3/4  13</td>
+			</tr>
+			<tr>
+				<th>2</th>
+				<th>8:00 - 8:50</th>
+				<td>wit.i.apl.i. - 1/4 16<br>
+					geogr.turyst - 2/4 6</td>
+				<td>j.ang - 1/4 6</td>
+				<td>j.polski 14</td>
+				<td></td>
+				<td>r_matematyka 13</td>
+			</tr>
+			<tr>
+				<th>3</th>
+				<th>8:55 - 9:35</th>
+				<td>wit.i.apl.i. - 1/4 16<br>
+					geogr.turyst - 2/4 6</td>
+				<td>matematyka 8</td>
+				<td>godz.wych 14</td>
+				<td>j.ang - 3/4 22</td>
+				<td>r_matematyka 13</td>
+			</tr>
+			<tr>
+				<th>4</th>
+				<th>9:45 - 10:30</th>
+				<td>pr.l.s.kom. - 1/4 16<br>
+					pr.l.s.kom. - 2/4 18<br>
+					ob.inf.w.tur - 3/4 19</td>
+				<td>sieci.komp. - 1/4 20<br>
+					sieci.komp. - 2/4 18<br>
+					prac.tur. - 3/4 19</td>
+				<td>adm.baz.d. - 1/4 18<br>
+					org.i_u.tur.-2/4 8</td>
+				<td>j.polski BR 14</td>
+				<td>sys.baz.d. - 1/4 18<br>
+					pod.dz.tur. - 2/4 14a</td>
+			</tr>
+			<tr>
+				<th>5</th>
+				<th>10:35 - 11:20</th>
+				<td>pr.l.s.kom. - 1/4 16<br>
+					pr.l.s.kom. - 2/4 18<br>
+					ob.inf.w.tur - 3/4 19</td>
+				<td>sieci.komp. - 1/4 20<br>
+					sieci.komp. - 2/4 18<br>
+					prac.tur. - 3/4 19</td>
+				<td>adm.baz.d. - 1/4 18<br>
+					org.i_u.tur. - 2/4 8</td>
+				<td>matematyka 13</td>
+				<td>sys.baz.d. - 1/4 18<br>
+					market.usl. - 2/4 11</td>
+			</tr>
+			<tr>
+				<th>6</th>
+				<th>11:40 - 12:25</th>
+				<td>pr.apl.komp. - 1/4 20<br>
+					obsł.tur. - 2/4 19</td>
+				<td>wf - 1/4 w2<br>
+					wf - 4/4 w3</td>
+				<td>wf - 1/4 w3<br>
+					wf - 4/4 w1</td>
+				<td>u_hist.i sp. 9</td>
+				<td>z_angielski - 1/4 22<br>
+					j.ang.w.tur. - 2/4 14a</td>
+			</tr>
+			<tr>
+				<th>7</th>
+				<th>12:30 - 13:15</th>
+				<td>pr.apl.komp. - 1/4 20<br>
+					obsł.tur. - 2/4 19</td>
+				<td>religia 8</td>
+				<td>wf - 1/4 w1<br>
+					wf - 4/4 w2</td>
+				<td>u_hist.i sp. 9</td>
+				<td>j.niem - 2/2 21</td>
+			</tr>
+			<tr>
+				<th>8</th>
+				<th>13:20 - 14:05</th>
+				<td>pr.apl.komp. - 1/4 20<br>
+					obsł.tur. - 2/4 19</td>
+				<td>j.niem - 1/2 21</td>
+				<td>religia 8</td>
+				<td>r_geografia - 1/4 6<br>
+					r_angielski - 3/4 15</td>
+				<td>j.niem - 2/2 21</td>
+			</tr>
+			<tr>
+				<th>9</th>
+				<th>14:10 - 14:55</th>
+				<td>pr.sys.op. - 1/4 20<br>
+					inf.turyst. - 2/4 19</td>
+				<td>j.niem-1/2 21</td>
+				<td></td>
+				<td>r_geografia - 1/4 6<br>
+					r_angielski - 3/4 15</td>
+				<td></td>
+			</tr>
+			<tr>
+				<th>10</th>
+				<th>15:00 - 15:45</th>
+				<td>j.ang - 3/4 22</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+	
+	<a href="#grupy"><div id="arrow"><img src="img/scroll_arrow.png"></div></a>
+	<div id="grupy">Grupy na zajęciach</div>
+	<div id="grupa_pierwsza" class="group">
+		<div class="nazwa_grupy">Grupa Pierwsza (1/4)</div>
+		<div class="nazwiska">
+			<ol>
+				<li>imię i nazwisko</li>
+				<li>imię i nazwisko</li>
+				<li>imię i nazwisko</li>
+				<li>imię i nazwisko</li>
+				<li>imię i nazwisko</li>
+				<li>imię i nazwisko</li>
+				<li>imię i nazwisko</li>
+				<li>imię i nazwisko</li>
+				<li>imię i nazwisko</li>
+				<li>imię i nazwisko</li>
+			</ol>
+		</div>
+	</div>
+	<div id="grupa_druga" class="group">
+		<div class="nazwa_grupy">Grupa Druga (2/4)</div>
+		<div class="nazwiska" style="border:red solid 4px;">
+			<ol>
+				<li>imię i nazwisko</li>
+				<li>imię i nazwisko</li>
+				<li>imię i nazwisko</li>
+				<li>imię i nazwisko</li>
+				<li>imię i nazwisko</li>
+				<li>imię i nazwisko</li>
+				<li>imię i nazwisko</li>
+				<li>imię i nazwisko</li>
+				<li>imię i nazwisko</li>
+				<li>imię i nazwisko</li>
+			</ol>
+		</div>
+	</div>
+	<div id="grupa_trzecia" class="group">
+		<div class="nazwa_grupy">Grupa Trzecia (3/4)</div>
+		<div class="nazwiska" style="border:yellow solid 4px;">
+			<ol>
+				<li>imię i nazwisko</li>
+				<li>imię i nazwisko</li>
+				<li>imię i nazwisko</li>
+				<li>imię i nazwisko</li>
+				<li>imię i nazwisko</li>
+				<li>imię i nazwisko</li>
+				<li>imię i nazwisko</li>
+				<li>imię i nazwisko</li>
+				<li>imię i nazwisko</li>
+				<li>imię i nazwisko</li>
+			</ol>
+		</div>
+	</div>
+	<div id="grupa_czwarta" class="group">
+		<div class="nazwa_grupy">Grupa Czwarta (4/4)</div>
+		<div class="nazwiska" style="border:gray solid 4px;">
+			<ol>
+				<li>imię i nazwisko</li>
+				<li>imię i nazwisko</li>
+				<li>imię i nazwisko</li>
+				<li>imię i nazwisko</li>
+				<li>imię i nazwisko</li>
+				<li>imię i nazwisko</li>
+				<li>imię i nazwisko</li>
+				<li>imię i nazwisko</li>
+				<li>imię i nazwisko</li>
+				<li>imię i nazwisko</li>
+			</ol>
+		</div>
+	</div>
+	<div id="stopka">a</div>
+</body>
+</html>
